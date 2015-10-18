@@ -11,17 +11,17 @@ namespace lukaszmakuch\ValueMatcher\String;
 
 /**
  * Checks a string against a regular expression.
- * 
+ *
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
  */
 class RegExpStringMatcher extends StringMatcherTpl
 {
     /**
      * Sets the regular expression pattern used to compare values.
-     * 
+     *
      * @param String $pattern regular expression used later as the first param
      * of the preg_match function.
-     * 
+     *
      * @throws \InvalidArgumentException if the patterns is not a string.
      */
     public function __construct($pattern)
@@ -31,9 +31,9 @@ class RegExpStringMatcher extends StringMatcherTpl
     
     /**
      * Checks a string against a regular expression.
-     * 
+     *
      * @param mixed $someValue
-     * 
+     *
      * @return boolean true if the given value matches.
      * @throws \InvalidArgumentException when the value is not a string
      */

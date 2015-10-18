@@ -11,7 +11,7 @@ namespace lukaszmakuch\ValueMatcher\String;
 
 /**
  * Abstract template of a string matcher.
- * 
+ *
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
  */
 abstract class StringMatcherTpl extends \lukaszmakuch\ValueMatcher\ValueMatcherTpl

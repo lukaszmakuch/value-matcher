@@ -16,9 +16,9 @@ interface ValueMatcher
 {
     /**
      * Checks whether some value matches.
-     * 
+     *
      * @param mixed $someValue
-     * 
+     *
      * @return boolean true if the values matches, false otherwise.
      * @throws \InvalidArgumentException when it's not possible to check this value.
      */

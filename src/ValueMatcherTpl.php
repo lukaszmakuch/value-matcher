@@ -21,9 +21,9 @@ abstract class ValueMatcherTpl implements ValueMatcher
     
     /**
      * Sets the pattern used to compare values.
-     * 
+     *
      * @param mixed $pattern
-     * 
+     *
      * @throws \InvalidArgumentException if the patterns is not a string.
      */
     public function __construct($pattern)
@@ -34,9 +34,9 @@ abstract class ValueMatcherTpl implements ValueMatcher
     
     /**
      * Performs type checking.
-     * 
+     *
      * @param mixed $someValue
-     * 
+     *
      * @return boolean true if the values matches, false otherwise.
      * @throws \InvalidArgumentException when it's not possible to check this value.
      */
@@ -49,14 +49,14 @@ abstract class ValueMatcherTpl implements ValueMatcher
     /**
      * @throws \InvalidArgumentException if invalid input
      */
-    protected abstract function throwExceptionIfInvalidInput($input);
+    abstract protected function throwExceptionIfInvalidInput($input);
     
     /**
      * Actual matching strategy.
-     * 
+     *
      * @param mixed $someValue
-     * 
+     *
      * @return boolean true if the values matches, false otherwise.
      */
-    protected abstract function matchesImpl($someValue);
+    abstract protected function matchesImpl($someValue);
 }
