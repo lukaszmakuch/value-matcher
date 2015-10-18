@@ -31,7 +31,17 @@ abstract class ValueMatcherTpl implements ValueMatcher
         $this->throwExceptionIfInvalidInput($pattern);
         $this->pattern = $pattern;
     }
-    
+
+    public function serialize()
+    {
+        return $this->pattern;
+    }
+
+    public function unserialize($serialized)
+    {
+        $this->pattern = $serialized;
+    }
+
     /**
      * Performs type checking.
      *

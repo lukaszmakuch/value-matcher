@@ -12,7 +12,7 @@ namespace lukaszmakuch\ValueMatcher;
 /**
  * Checks whether some value matches.
  */
-interface ValueMatcher
+interface ValueMatcher extends \Serializable
 {
     /**
      * Checks whether some value matches.

@@ -15,7 +15,7 @@ abstract class AbstractStringMatcherTest extends \PHPUnit_Framework_TestCase
      * @var StrictStringMatcher
      */
     protected $m;
-    
+
     public function testExceptionIfNotString()
     {
         $this->setExpectedException(\InvalidArgumentException::class);

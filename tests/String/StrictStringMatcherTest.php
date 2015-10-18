@@ -9,7 +9,7 @@
 
 namespace lukaszmakuch\ValueMatcher\String;
 
-class StrictStringMatcherTest extends AbstractStringMatcherTest
+class StrictStringMatcherTest extends \lukaszmakuch\ValueMatcher\ValueMatcherTplTest
 {
     /**
      * @var StrictStringMatcher
@@ -21,7 +21,7 @@ class StrictStringMatcherTest extends AbstractStringMatcherTest
         $this->m = new StrictStringMatcher("Abc");
     }
     
-    public function testMatchingEqualStrings()
+    public function testCorrentMatching()
     {
         $this->assertTrue($this->m->matches("Abc"));
     }

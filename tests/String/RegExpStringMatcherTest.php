@@ -15,17 +15,17 @@ class RegExpStringMatcherTest extends AbstractStringMatcherTest
      * @var StrictStringMatcher
      */
     protected $m;
-    
+
     public function setUp()
     {
         $this->m = new RegExpStringMatcher("@^[a-z]x$@");
     }
-    
-    public function testMatchingProperString()
+
+    public function testCorrentMatching()
     {
         $this->assertTrue($this->m->matches("cx"));
     }
-    
+
     public function testMatchingInvalidString()
     {
         $this->assertFalse($this->m->matches("xc"));
