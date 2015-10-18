@@ -14,7 +14,7 @@ namespace lukaszmakuch\ValueMatcher\String;
  *
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
  */
-abstract class StringMatcherTpl extends \lukaszmakuch\ValueMatcher\ValueMatcherTpl
+abstract class StringMatcherTpl extends \lukaszmakuch\ValueMatcher\ValueMatcherTpl implements StringMatcher
 {
     /**
      * @throws \InvalidArgumentException if input is not a string
