@@ -21,9 +21,6 @@
         }
     },
     "minimum-stability": "stable",
-    "require": {
-        "lukaszmakuch/value-matcher": "0.0.1"
-    },
     "require-dev": {
         "phpunit/phpunit": "4.7.*",
         "phpdocumentor/phpdocumentor": "2.*"
