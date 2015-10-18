@@ -9,7 +9,7 @@
 
 namespace lukaszmakuch\ValueMatcher\String;
 
-class StrictStringMatcherTest extends AbstractStringMatcherTest
+class RegExpStringMatcherTest extends AbstractStringMatcherTest
 {
     /**
      * @var StrictStringMatcher
@@ -18,16 +18,16 @@ class StrictStringMatcherTest extends AbstractStringMatcherTest
     
     public function setUp()
     {
-        $this->m = new StrictStringMatcher("Abc");
+        $this->m = new RegExpStringMatcher("@^[a-z]x$@");
     }
     
-    public function testMatchingEqualStrings()
+    public function testMatchingProperString()
     {
-        $this->assertTrue($this->m->matches("Abc"));
+        $this->assertTrue($this->m->matches("cx"));
     }
     
-    public function testMatchingSimilarStrings()
+    public function testMatchingInvalidString()
     {
-        $this->assertFalse($this->m->matches("abc"));
+        $this->assertFalse($this->m->matches("xc"));
     }
 }
