@@ -20,7 +20,7 @@ interface ValueMatcher extends \Serializable
      * @param mixed $someValue
      *
      * @return boolean true if the values matches, false otherwise.
-     * @throws \InvalidArgumentException when it's not possible to check this value.
+     * @throws Exception\ImpossibleToMatchValueException
      */
     public function matches($someValue);
 }

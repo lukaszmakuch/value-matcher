@@ -9,7 +9,10 @@
 
 namespace lukaszmakuch\ValueMatcher\String;
 
-abstract class AbstractStringMatcherTest extends \PHPUnit_Framework_TestCase
+use lukaszmakuch\ValueMatcher\Exception\ImpossibleToMatchValueException;
+use PHPUnit_Framework_TestCase;
+
+abstract class AbstractStringMatcherTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @var StrictStringMatcher
@@ -18,7 +21,7 @@ abstract class AbstractStringMatcherTest extends \PHPUnit_Framework_TestCase
 
     public function testExceptionIfNotString()
     {
-        $this->setExpectedException(\InvalidArgumentException::class);
+        $this->setExpectedException(ImpossibleToMatchValueException::class);
         $this->m->matches(123);
     }
 }

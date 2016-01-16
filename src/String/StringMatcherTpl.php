@@ -9,20 +9,24 @@
 
 namespace lukaszmakuch\ValueMatcher\String;
 
+use InvalidArgumentException;
+use lukaszmakuch\ValueMatcher\Exception\ImpossibleToMatchValueException;
+use lukaszmakuch\ValueMatcher\ValueMatcherTpl;
+
 /**
  * Abstract template of a string matcher.
  *
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
  */
-abstract class StringMatcherTpl extends \lukaszmakuch\ValueMatcher\ValueMatcherTpl implements StringMatcher
+abstract class StringMatcherTpl extends ValueMatcherTpl implements StringMatcher
 {
     /**
-     * @throws \InvalidArgumentException if input is not a string
+     * @throws ImpossibleToMatchValueException if input is not a string
      */
     protected function throwExceptionIfInvalidInput($input)
     {
         if (!is_string($input)) {
-            throw new \InvalidArgumentException("Input must be a string");
+            throw new ImpossibleToMatchValueException("Input must be a string");
         }
     }
 }
